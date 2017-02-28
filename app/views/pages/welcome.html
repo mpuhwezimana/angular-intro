@@ -2,12 +2,18 @@
 
   <div ng-controller="messageCtrl">
     <h1> Things I must do</h1>
-    <div ng-repeat="task in tasks"> {{task}}</div>
-    <div> 
-    <li> Update task 1<input ng-model = "tasks[0]"></li>
-    <li> Update task 2<input ng-model = "tasks[1]"></li>
-    <li> Update task 3<input ng-model = "tasks[2]"></li>
-    <li> Update task 4<input ng-model = "tasks[3]"></li>
+    <div ng-repeat="task in tasks track by $index"> 
+      {{task}}
+      <li> Update task<input ng-model = "task"></li>
+    </div>    
+  
+    <div>
+    <form name="myForm">
+      Add Task: <input name="myInput" ng-model="newTask" required>
+      <button ng-click="addTask(newTask)">Add Task</button>
+    </form>
+    <p>The input's valid state is:</p>
+    <h1>{{myForm.myInput.$valid}}</h1>
     </div>
   </div>
 </div>
