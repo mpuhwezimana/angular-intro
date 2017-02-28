@@ -1,3 +1,13 @@
 <div ng-app="app">
-  {{ 1 + 1 }}
+
+  <div ng-controller="messageCtrl">
+    <h1> Things I must do</h1>
+    <div ng-repeat="task in tasks"> {{task}}</div>
+    <div> 
+    <li> Update task 1<input ng-model = "tasks[0]"></li>
+    <li> Update task 2<input ng-model = "tasks[1]"></li>
+    <li> Update task 3<input ng-model = "tasks[2]"></li>
+    <li> Update task 4<input ng-model = "tasks[3]"></li>
+    </div>
+  </div>
 </div>
