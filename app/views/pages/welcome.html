@@ -9,7 +9,7 @@
   
     <div>
     <form name="myForm">
-      Add Task: <input name="myInput" ng-model="newTask" required>
+      Add Task: <input name="myInput" ng-model="newTask" required ng-click="removeTask">
       <button ng-click="addTask(newTask)">Add Task</button>
     </form>
     <p>The input's valid state is:</p>

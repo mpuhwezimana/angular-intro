@@ -6,8 +6,10 @@
     $scope.tasks = ["take out the trash", "walk the dog", "play soccer", "wash the clothes"];
 
     $scope.addTask = function(task) {
-      $scope.tasks.push(task);
-      $scope.newTask = null;
+      if (task) {        
+        $scope.tasks.push(task); 
+        $scope.newTask = null; 
+      }
 
     };
 
